@@ -1,0 +1,1 @@
+Based on https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook
