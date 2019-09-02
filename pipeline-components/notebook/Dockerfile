@@ -26,8 +26,7 @@ RUN conda install -y python=3 \
     && conda install -y ipykernel \
     && conda update conda \
     && conda clean --all --yes
-RUN pip install --upgrade pip papermill pandas boto3 psycopg2 sqlalchemy
-
+RUN pip install --upgrade pip papermill 
 COPY src/run_notebook.sh ./
 ENTRYPOINT ["bash", "./run_notebook.sh"]
 

@@ -5,10 +5,10 @@ inputs:
 - {name: Output notebook URI, type: S3Path, description='S3 path for output notebook'} # The default values must be specified as YAML strings.
 - {name: Params , type: S3Path, description='S3 path for params.yaml (Notebook parameters)'}
 outputs:
-- {name: Output 1 URI, type: S3Path, description='S3 path for output notebook'}
+- {name: Output notebook URI, type: S3Path, description='S3 path for output notebook'}
 implementation:
   container:
-    image: quay.io/volvocars/{{papermill-image}} # Fetch as param after build 
+    image: quay.io/volvocars/papermill:latest 
     command: [
       papermill,
       input.ipynb,       {inputPath: Input notebook S3URI},  
