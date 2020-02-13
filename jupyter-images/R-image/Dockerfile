@@ -55,30 +55,3 @@ ENV NB_PREFIX /
 
 CMD ["sh","-c", "jupyter lab --notebook-dir=/home/jovyan --ip=0.0.0.0 --no-browser --allow-root --port=8888 --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_origin='*' --NotebookApp.base_url=${NB_PREFIX}"]
 
-
-#FROM r-base
-
-#RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-#  libcurl4-openssl-dev \
-#  libssl-dev \
-#  libxml2-dev \
-#  libcairo2-dev \
-#  libsqlite3-dev \
-#  libpq-dev \
-#  libssh2-1-dev \
-#  unixodbc-dev \
-#  libsasl2-dev \
-#  && install2.r --error \
-#   --deps TRUE \
-#    devtools \
-#    spdep
-
-
-
-
-
-
-#docker build . -t rnotebook
-#docker run -p 8888:8888 rnotebook
-#docker tag quay.io/volvocars/jupyter:rnotebook rnotebook
-#docker push 
